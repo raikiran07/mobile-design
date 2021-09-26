@@ -11,12 +11,14 @@
 html{
     font-size:16px;
     -webkit-font-smoothing:antialised;
+    border:1px solid black;
+/*    margin-right:-10%;*/
     
 }
 
 body{
     font-family:'Roboto',sans-serif;
-/*    height:1000vh;*/
+    height:1000vh;
 }
 
 nav{
@@ -237,6 +239,42 @@ section{
     display:none;
 }
 
+section.companies .container{
+    width:90%;
+    margin:0 auto;
+}
+section.companies .container h1{
+    width:76%;
+    font-size:2.5rem;
+    margin:0 auto;
+    text-align:center;
+    font-weight:600;
+    line-height: 1.7;
+/*    border:1px solid black;*/
+    padding:2%;
+    margin-bottom:3rem;
+}
+section.companies .container .image-wrapper{
+    display:grid;
+    grid-template-columns:1fr;
+/*    grid-gap:5%;*/
+    
+}
+
+section.companies .container .image-wrapper .image-box{
+    width:100%;
+    padding:5%;
+/*    border:1px solid black;*/
+    
+    
+}
+
+section.companies .container .image-wrapper .image-box img{
+    width:100%;
+}
+
+
+
 /*media querries*/
 
 @media(min-width:940px){
@@ -263,6 +301,10 @@ section{
     
    
 }
+    section.companies .container .image-wrapper{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:5%;
+    }
 }
 
     @media(min-width:990px){
@@ -313,7 +355,9 @@ section{
         .search-box.hero-box ::placeholder {
             color:#949f87;
         }
-        
+        section.companies .container .image-wrapper{
+            grid-template-columns: repeat(3,1fr);
+        }
         
     }
 
